@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#eff8ff">
+    <meta name="description" content="مساحة صغيرة لحكاية كبيرة.. ذكريات، ضحك، وحاجات حلوة لينا إحنا بس.">
+    <title>حكايتنا | حتة من قلبي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="is-locked">
+    <div id="site-shell">
+    <div class="ambient ambient-one" aria-hidden="true"></div>
+    <div class="ambient ambient-two" aria-hidden="true"></div>
+    <div class="hearts-layer" id="hearts-layer" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#home" aria-label="حكايتنا، الصفحة الرئيسية">
+        <span class="brand-heart">♥</span>
+        <span>حكايتنا<span class="brand-dot">.</span></span>
+      </a>
+      <nav aria-label="التنقل الرئيسي">
+        <a href="#story">حكايتنا</a>
+        <a href="#avatars">الأفتار</a>
+        <a href="#memories">ذكرياتنا</a>
+        <a href="#chat">الشات</a>
+        <a href="#music">الأغاني</a>
+      </nav>
+      <div class="topbar-actions">
+        <button class="settings-button" id="settings-button" type="button" aria-label="إعدادات الموقع" title="خصصي الصفحة">⚙</button>
+        <button class="sound-button" id="heart-button" type="button" aria-label="ابعت قلب" title="ابعت قلب">♡</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <span class="eyebrow"><span class="eyebrow-sparkle">✦</span><span data-copy="heroBadge">لحدّك إنتِ.. ومن قلبي</span></span>
+          <h1 data-copy="headline">في حاجات كتير حلوة في الدنيا، بس إنتِ أحلاهم.</h1>
+          <p class="hero-description" data-copy="description">عملتلك حتة صغيرة هنا.. فيها ضحكتنا، شوية لعب، وكلام نفسي أقولهولك كل يوم.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#story">تعالي أوريكي <span aria-hidden="true">←</span></a>
+            <button class="button button-quiet" id="surprise-button" type="button"><span aria-hidden="true">✧</span> دوسي للمفاجأة</button>
+          </div>
+          <div class="hero-note"><span class="note-avatars" aria-hidden="true"><i>♡</i><i>✿</i></span> معمولة مخصوص.. عشانك إنتِ</div>
+        </div>
+        <div class="hero-art" aria-label="صورة رومانسية لزوجين">
+          <div class="art-orbit orbit-one"></div>
+          <div class="art-orbit orbit-two"></div>
+          <div class="hero-photo has-illustrated-cover" id="hero-photo">
+            <img id="cover-photo" alt="صورة غلاف من ذكرياتكم" hidden>
+            <div class="hero-couple-scene" id="hero-couple-scene" aria-label="أفتاركم الكرتوني">
+              <div class="hero-scene-sparkle scene-sparkle-one">✦</div><div class="hero-scene-sparkle scene-sparkle-two">✧</div>
+              <div class="hero-character hero-character-you" data-hero-avatar="you"></div>
+              <div class="hero-character hero-character-partner" data-hero-avatar="partner"></div>
+              <span class="hero-scene-heart">♡</span>
+            </div>
+            <div class="photo-caption"><span>♡</span><div><strong>أحلى حكاية</strong><small>لسه بنكتب فيها</small></div></div>
+          </div>
+          <div class="floating-sticker sticker-heart" aria-hidden="true">♥</div>
+          <div class="floating-sticker sticker-sparkle" aria-hidden="true">✦</div>
+          <div class="floating-sticker sticker-note" aria-hidden="true">إنتِ حتة من قلبي ✿</div>
+        </div>
+        <a class="scroll-cue" href="#story" aria-label="انزلي للقسم التالي"><span></span> كمّلي لتحت</a>
+      </section>
+
+      <section class="story section-wrap" id="story">
+        <div class="section-heading">
+          <span class="eyebrow">الحلو بيبدأ من هنا</span>
+          <h2>عدّى قد إيه على <span>أحلى صدفة؟</span></h2>
+          <p>من أول يوم، وكل يوم بيعدّي.. بحبك أكتر من اليوم اللي قبله.</p>
+        </div>
+        <div class="counter-card">
+          <div class="counter-decoration" aria-hidden="true">♡</div>
+          <div class="counter-intro"><span class="live-dot"></span> وإحنا سوا بقالنا</div>
+          <div class="counter-grid" id="love-counter" aria-live="polite">
+            <div class="counter-unit"><strong id="days">--</strong><span>يوم</span></div>
+            <span class="counter-separator">:</span>
+            <div class="counter-unit"><strong id="hours">--</strong><span>ساعة</span></div>
+            <span class="counter-separator">:</span>
+            <div class="counter-unit"><strong id="minutes">--</strong><span>دقيقة</span></div>
+            <span class="counter-separator">:</span>
+            <div class="counter-unit"><strong id="seconds">--</strong><span>ثانية</span></div>
+          </div>
+          <p class="counter-footnote">وكل ثانية جاية.. نفسي تبقى معاكي <span>♥</span></p>
+          <div class="counter-date" id="counter-date"></div>
+        </div>
+        <div class="little-things">
+          <article class="little-card"><span class="little-icon icon-peach">☼</span><h3>ضحكتك</h3><p>كفاية تضحكي.. يومي كله بيتظبط لوحده.</p></article>
+          <article class="little-card"><span class="little-icon icon-lilac">✿</span><h3>تفاصيلك</h3><p>حتى الحاجات الصغيرة اللي بتعمليها.. بحبها.</p></article>
+          <article class="little-card"><span class="little-icon icon-pink">♡</span><h3>وجودك</h3><p>أحلى حاجة حصلتلي؟ إنك بقيتي في حياتي.</p></article>
+        </div>
+      </section>
+
+      <section class="avatars-section section-wrap" id="avatars">
+        <div class="section-heading">
+          <span class="eyebrow">صورتنا الكرتونية سوا</span>
+          <h2>اعملي أفتار <span>على مزاجك.</span></h2>
+          <p>اختاري لون البشرة والشعر واللبس.. وظبّطي ستايلكوا زي ما بتحبوا.</p>
+        </div>
+        <div class="avatar-studio">
+          <article class="avatar-editor" data-avatar-editor="you">
+            <div class="avatar-preview-wrap">
+              <div class="snap-avatar" data-avatar-preview="you" aria-label="معاينة الأفتار">
+                <img class="avatar-photo" alt="صورتك الشخصية">
+                <svg class="avatar-illustration" viewBox="0 0 180 220" role="img" aria-label="شخصية كرتونية مخصصة">
+                  <ellipse cx="90" cy="210" rx="59" ry="8" fill="#315779" opacity=".12"/>
+                  <path class="avatar-shirt-shape" d="M28 211c2-36 14-55 45-63h34c31 8 43 27 45 63H28Z" fill="var(--shirt)"/>
+                  <path d="M75 140h30v27c-6 13-24 13-30 0v-27Z" fill="var(--skin)"/>
+                  <path class="avatar-hair-back avatar-long-hair" d="M44 88c-8-39 5-68 45-68s53 29 47 68l-7 55c-2 13-14 20-27 13l-17-10-17 10c-13 7-25 0-27-13l-7-55Z" fill="var(--hair)"/>
+                  <ellipse cx="48" cy="91" rx="9" ry="14" fill="var(--skin)"/><ellipse cx="132" cy="91" rx="9" ry="14" fill="var(--skin)"/>
+                  <path class="avatar-face" d="M51 66c0-26 16-40 39-40s39 14 39 40v38c0 31-18 52-39 52s-39-21-39-52V66Z" fill="var(--skin)"/>
+                  <g class="avatar-short-hair" fill="var(--hair)"><path d="M48 77c-7-34 9-59 42-59 32 0 49 24 42 58-8-14-16-20-26-22-13 14-33 21-58 23Z"/><path d="M49 71c-2 23 1 35 6 43l-2 18c-10-8-16-26-14-44 1-8 4-13 10-17Zm81 0c7 9 10 23 7 39-1 9-5 17-10 22l-2-20c5-11 6-24 5-41Z"/></g>
+                  <g class="avatar-long-hair" fill="var(--hair)"><path d="M48 67c0-33 15-50 42-50 30 0 44 20 42 54-11-10-17-19-20-30-13 16-34 24-64 26Z"/><path d="M48 67c-7 26-5 65 4 86-15-6-22-24-21-51 0-20 6-34 17-41Zm83-3c11 10 17 29 16 52-1 17-7 32-17 38 7-30 7-62 1-90Z"/></g>
+                  <g class="avatar-curly-hair" fill="var(--hair)"><circle cx="53" cy="51" r="15"/><circle cx="69" cy="34" r="16"/><circle cx="88" cy="27" r="17"/><circle cx="108" cy="32" r="17"/><circle cx="125" cy="48" r="15"/><path d="M49 54c16 11 36 13 58 1 9-5 14-5 21-2l-5 24c-18-9-44-11-73 2L44 71l5-17Z"/></g>
+                  <path d="M63 84c7-5 14-5 20-1M98 83c6-5 13-5 20 0" fill="none" stroke="var(--hair)" stroke-width="3" stroke-linecap="round"/>
+                  <ellipse cx="74" cy="96" rx="5.5" ry="7" fill="#fff"/><ellipse cx="107" cy="96" rx="5.5" ry="7" fill="#fff"/>
+                  <circle cx="76" cy="97" r="3.6" fill="#3d3034"/><circle cx="109" cy="97" r="3.6" fill="#3d3034"/>
+                  <circle cx="77" cy="96" r="1.1" fill="#fff"/><circle cx="110" cy="96" r="1.1" fill="#fff"/>
+                  <ellipse cx="63" cy="115" rx="9" ry="5" fill="#ef8e9a" opacity=".28"/><ellipse cx="118" cy="115" rx="9" ry="5" fill="#ef8e9a" opacity=".28"/>
+                  <path d="M88 101c-1 8-4 12-1 14 2 2 5 2 7 0" fill="none" stroke="#a76e5a" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M82 127c5 8 15 9 21-1" fill="none" stroke="#a84f5c" stroke-width="3" stroke-linecap="round"/>
+                  <path class="avatar-glasses-svg" d="M57 88h29v18c-8 5-20 4-26-1l-3-17Zm38 0h29l-3 17c-7 5-19 6-26 1V88Zm-9 5h9" fill="none" stroke="#526577" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="m90 168 14 17-14 15-14-15 14-17Z" fill="#fff" opacity=".76"/>
+                </svg>
+                <span class="avatar-accessory">♥</span>
+              </div>
+              <div><span class="avatar-kicker">الأفتار الأول</span><h3 data-avatar-name="you">أنا</h3></div>
+            </div>
+            <label class="avatar-field">الاسم<input data-avatar-field="you:name" maxlength="24" value="أنا" autocomplete="off"></label>
+            <div class="avatar-field"><span>لون البشرة</span><div class="swatch-row" data-avatar-swatches="you:skin"></div></div>
+            <div class="avatar-field"><span>لون الشعر</span><div class="swatch-row" data-avatar-swatches="you:hair"></div></div>
+            <div class="avatar-field"><span>لون اللبس</span><div class="swatch-row" data-avatar-swatches="you:shirt"></div></div>
+            <div class="avatar-controls">
+              <label class="avatar-field">ستايل الشعر<select data-avatar-field="you:style"><option value="short">قصير</option><option value="long">طويل</option><option value="curly">كيرلي</option></select></label>
+              <label class="glasses-control"><input type="checkbox" data-avatar-field="you:glasses"> نضارة</label>
+            </div>
+            <div class="avatar-photo-actions"><button class="mini-button" type="button" data-avatar-upload="you">ضيفي صورة</button><button class="mini-button mini-button-quiet" type="button" data-avatar-clear="you">رجّعي الأفتار</button><input type="file" accept="image/*" data-avatar-file="you" hidden></div>
+          </article>
+          <div class="avatar-couple-mark" aria-hidden="true">♡</div>
+          <article class="avatar-editor" data-avatar-editor="partner">
+            <div class="avatar-preview-wrap">
+              <div class="snap-avatar partner-avatar" data-avatar-preview="partner" aria-label="معاينة أفتار حبيبتك">
+                <img class="avatar-photo" alt="صورتها الشخصية">
+                <svg class="avatar-illustration" viewBox="0 0 180 220" role="img" aria-label="شخصية كرتونية مخصصة">
+                  <ellipse cx="90" cy="210" rx="59" ry="8" fill="#315779" opacity=".12"/>
+                  <path class="avatar-shirt-shape" d="M28 211c2-36 14-55 45-63h34c31 8 43 27 45 63H28Z" fill="var(--shirt)"/>
+                  <path d="M75 140h30v27c-6 13-24 13-30 0v-27Z" fill="var(--skin)"/>
+                  <path class="avatar-hair-back avatar-long-hair" d="M44 88c-8-39 5-68 45-68s53 29 47 68l-7 55c-2 13-14 20-27 13l-17-10-17 10c-13 7-25 0-27-13l-7-55Z" fill="var(--hair)"/>
+                  <ellipse cx="48" cy="91" rx="9" ry="14" fill="var(--skin)"/><ellipse cx="132" cy="91" rx="9" ry="14" fill="var(--skin)"/>
+                  <path class="avatar-face" d="M51 66c0-26 16-40 39-40s39 14 39 40v38c0 31-18 52-39 52s-39-21-39-52V66Z" fill="var(--skin)"/>
+                  <g class="avatar-short-hair" fill="var(--hair)"><path d="M48 77c-7-34 9-59 42-59 32 0 49 24 42 58-8-14-16-20-26-22-13 14-33 21-58 23Z"/><path d="M49 71c-2 23 1 35 6 43l-2 18c-10-8-16-26-14-44 1-8 4-13 10-17Zm81 0c7 9 10 23 7 39-1 9-5 17-10 22l-2-20c5-11 6-24 5-41Z"/></g>
+                  <g class="avatar-long-hair" fill="var(--hair)"><path d="M48 67c0-33 15-50 42-50 30 0 44 20 42 54-11-10-17-19-20-30-13 16-34 24-64 26Z"/><path d="M48 67c-7 26-5 65 4 86-15-6-22-24-21-51 0-20 6-34 17-41Zm83-3c11 10 17 29 16 52-1 17-7 32-17 38 7-30 7-62 1-90Z"/></g>
+                  <g class="avatar-curly-hair" fill="var(--hair)"><circle cx="53" cy="51" r="15"/><circle cx="69" cy="34" r="16"/><circle cx="88" cy="27" r="17"/><circle cx="108" cy="32" r="17"/><circle cx="125" cy="48" r="15"/><path d="M49 54c16 11 36 13 58 1 9-5 14-5 21-2l-5 24c-18-9-44-11-73 2L44 71l5-17Z"/></g>
+                  <path d="M63 84c7-5 14-5 20-1M98 83c6-5 13-5 20 0" fill="none" stroke="var(--hair)" stroke-width="3" stroke-linecap="round"/>
+                  <ellipse cx="74" cy="96" rx="5.5" ry="7" fill="#fff"/><ellipse cx="107" cy="96" rx="5.5" ry="7" fill="#fff"/>
+                  <circle cx="76" cy="97" r="3.6" fill="#3d3034"/><circle cx="109" cy="97" r="3.6" fill="#3d3034"/>
+                  <circle cx="77" cy="96" r="1.1" fill="#fff"/><circle cx="110" cy="96" r="1.1" fill="#fff"/>
+                  <ellipse cx="63" cy="115" rx="9" ry="5" fill="#ef8e9a" opacity=".28"/><ellipse cx="118" cy="115" rx="9" ry="5" fill="#ef8e9a" opacity=".28"/>
+                  <path d="M88 101c-1 8-4 12-1 14 2 2 5 2 7 0" fill="none" stroke="#a76e5a" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M82 127c5 8 15 9 21-1" fill="none" stroke="#a84f5c" stroke-width="3" stroke-linecap="round"/>
+                  <path class="avatar-glasses-svg" d="M57 88h29v18c-8 5-20 4-26-1l-3-17Zm38 0h29l-3 17c-7 5-19 6-26 1V88Zm-9 5h9" fill="none" stroke="#526577" stroke-width="3" stroke-linejoin="round"/>
+                  <path d="m90 168 14 17-14 15-14-15 14-17Z" fill="#fff" opacity=".76"/>
+                </svg>
+                <span class="avatar-accessory">✦</span>
+              </div>
+              <div><span class="avatar-kicker">الأفتار التاني</span><h3 data-avatar-name="partner">حبيبتي</h3></div>
+            </div>
+            <label class="avatar-field">الاسم<input data-avatar-field="partner:name" maxlength="24" value="حبيبتي" autocomplete="off"></label>
+            <div class="avatar-field"><span>لون البشرة</span><div class="swatch-row" data-avatar-swatches="partner:skin"></div></div>
+            <div class="avatar-field"><span>لون الشعر</span><div class="swatch-row" data-avatar-swatches="partner:hair"></div></div>
+            <div class="avatar-field"><span>لون اللبس</span><div class="swatch-row" data-avatar-swatches="partner:shirt"></div></div>
+            <div class="avatar-controls">
+              <label class="avatar-field">ستايل الشعر<select data-avatar-field="partner:style"><option value="short">قصير</option><option value="long" selected>طويل</option><option value="curly">كيرلي</option></select></label>
+              <label class="glasses-control"><input type="checkbox" data-avatar-field="partner:glasses"> نضارة</label>
+            </div>
+            <div class="avatar-photo-actions"><button class="mini-button" type="button" data-avatar-upload="partner">ضيفي صورة</button><button class="mini-button mini-button-quiet" type="button" data-avatar-clear="partner">رجّعي الأفتار</button><input type="file" accept="image/*" data-avatar-file="partner" hidden></div>
+          </article>
+        </div>
+        <p class="avatar-hint">الأفتارات والصور بتتحفظ على الجهاز ده بس <span>♡</span></p>
+      </section>
+
+      <section class="memories section-wrap" id="memories">
+        <div class="section-heading heading-inline">
+          <div><span class="eyebrow">ألبومنا الصغير</span><h2>لحظات <span>تتحبّ تاني.</span></h2></div>
+          <p>كل صورة حكاية.. وكل حكاية فيها إنتِ.</p>
+        </div>
+        <div class="gallery-grid gallery-empty" id="gallery">
+          <div class="gallery-empty-state" id="gallery-empty">
+            <span class="gallery-empty-art" aria-hidden="true">♡</span>
+            <strong>صوركم الحلوة مكانها هنا</strong>
+            <small>ضيفي أول ذكرى.. والألبوم هيفضل بتاعكم إنتوا بس</small>
+          </div>
+          <button class="add-memory" id="add-memory" type="button"><span class="add-icon">＋</span><strong>ضيفي صورتنا</strong><small>مكان لذكريات أكتر وأكتر</small></button>
+          <input id="photo-input" type="file" accept="image/*" multiple hidden>
+        </div>
+        <p class="gallery-hint">الصور اللي هتضيفيها بتتحفظ على نفس الجهاز بس <span>♡</span></p>
+      </section>
+
+      <section class="chat-section section-wrap" id="chat">
+        <div class="section-heading">
+          <span class="eyebrow">كلامنا اللي بينّا</span>
+          <h2>شات <span>صغير لينا.</span></h2>
+          <p>بدّلوا بين الأفتارين واكتبوا لبعض.. المحادثة بتتحفظ على الجهاز.</p>
+        </div>
+        <div class="chat-card">
+          <div class="chat-header">
+            <div class="chat-status"><span class="chat-live-dot"></span><div><strong>مساحتنا الخاصة</strong><small>مين موجود دلوقتي؟</small></div></div>
+            <button class="mini-button mini-button-quiet" id="clear-chat" type="button">مسح الشات 🔒</button>
+          </div>
+          <div class="presence-panel" aria-live="polite">
+            <div class="presence-now"><strong>الموجودين دلوقتي</strong><ul id="presence-online" class="presence-online"><li>مفيش حد ظاهر حاليًا</li></ul></div>
+            <div class="presence-history"><strong>آخر حركة</strong><ul id="presence-events" class="presence-events"><li>لسه مفيش حركة مسجلة</li></ul></div>
+            <p class="presence-note">الحضور بيتسجل على نفس المتصفح والجهاز فقط؛ مش بيظهر لحد على جهاز تاني.</p>
+          </div>
+          <div class="chat-switch" role="group" aria-label="اختاري مين بيكتب">
+            <button class="chat-person is-active" data-chat-sender="you" type="button"><span class="chat-mini-avatar" data-chat-avatar="you">♡</span><span data-chat-name="you">أنا</span></button>
+            <button class="chat-person" data-chat-sender="partner" type="button"><span class="chat-mini-avatar" data-chat-avatar="partner">♡</span><span data-chat-name="partner">حبيبتي</span></button>
+          </div>
+          <div class="chat-messages" id="chat-messages" aria-live="polite" aria-label="رسائل المحادثة"></div>
+          <form class="chat-compose" id="chat-form">
+            <label class="visually-hidden" for="chat-input">اكتبي رسالة</label>
+            <input id="chat-input" maxlength="500" placeholder="اكتبي حاجة حلوة..." autocomplete="off" required>
+            <button class="chat-send" type="submit" aria-label="إرسال الرسالة">↑</button>
+          </form>
+          <p class="chat-local-note">علامة «اتقرت» بتظهر لما تبدّلوا للشخص التاني هنا. الشات محلي ومش بيتبعت لأي جهاز تاني <span>♡</span></p>
+        </div>
+      </section>
+
+      <section class="play section-wrap" id="play">
+        <div class="section-heading">
+          <span class="eyebrow">وقت الدلع واللعب</span>
+          <h2>يلا نعمل حاجة <span>حلوة؟</span></h2>
+          <p>اختاري واحدة.. وممنوع تقولي مش فاضية 😌</p>
+        </div>
+        <div class="play-grid">
+          <article class="game-card quiz-card">
+            <div class="game-top"><span class="game-icon">✧</span><span class="game-tag">تحدّي صغير</span></div>
+            <h3>قد إيه عارفاني؟</h3>
+            <p>سؤال سريع.. نشوف هتجيبي كام من كام!</p>
+            <button class="text-button" id="quiz-button" type="button">ابدئي التحدي <span>←</span></button>
+          </article>
+          <article class="game-card compliment-card">
+            <div class="game-top"><span class="game-icon">♡</span><span class="game-tag">جرعة حب</span></div>
+            <h3>محتاجة كلمة حلوة؟</h3>
+            <p>٥٠٠٠ رسالة مختلفة ليكي.. واحدة واحدة ومن غير ما نكررهم قبل ما يخلصوا.</p>
+            <button class="text-button" id="compliment-button" type="button">قوليلي حاجة حلوة <span>←</span></button>
+          </article>
+          <article class="game-card date-card">
+            <div class="game-top"><span class="game-icon">☼</span><span class="game-tag">خروجة علينا</span></div>
+            <h3>نخرج فين المرة الجاية؟</h3>
+            <p>سيبيها للصدفة.. اختاري لنا خروجة.</p>
+            <button class="text-button" id="date-button" type="button">اختاري لنا <span>←</span></button>
+          </article>
+          <article class="game-card long-game-card">
+            <div class="game-top"><span class="game-icon">✿</span><span class="game-tag">٢٠ جولة</span></div>
+            <h3>اختاري حكايتنا</h3>
+            <p>لعبة طويلة شوية: اختيارات وأسئلة لطيفة، وفي الآخر تطلعلكم فكرة خروجة على مزاجكم.</p>
+            <button class="text-button" id="story-game-button" type="button">ابدئي اللعبة <span>←</span></button>
+          </article>
+          <article class="game-card memory-game-card">
+            <div class="game-top"><span class="game-icon">🧩</span><span class="game-tag">لعبة تركيز</span></div>
+            <h3>طابقي القلوب</h3>
+            <p>افتحي الكروت ودوّري على ٦ أزواج متشابهة قبل ما المحاولات تخلص.</p>
+            <button class="text-button" id="memory-game-button" type="button">ابدئي المطابقة <span>←</span></button>
+          </article>
+          <article class="game-card word-game-card">
+            <div class="game-top"><span class="game-icon">🔤</span><span class="game-tag">خمني الكلمة</span></div>
+            <h3>كلمة ناقصة</h3>
+            <p>لمي الحروف من التلميحات وخمني كلمة حلوة من حكايتنا.</p>
+            <button class="text-button" id="word-game-button" type="button">وريني الكلمة <span>←</span></button>
+          </article>
+          <article class="game-card heart-game-card">
+            <div class="game-top"><span class="game-icon">💬</span><span class="game-tag">حكاوي بينا</span></div>
+            <h3>سؤال من القلب</h3>
+            <p>أسئلة لطيفة تفتح كلام جديد وتخلي كل إجابة بداية حكاية.</p>
+            <button class="text-button" id="heart-game-button" type="button">اسحبوا سؤال <span>←</span></button>
+          </article>
+        </div>
+      </section>
+
+      <section class="music-section section-wrap" id="music">
+        <div class="section-heading">
+          <span class="eyebrow">أغنية تشبه حكايتكم</span>
+          <h2>اختاري مزيكا <span>على مزاجك.</span></h2>
+          <p>اختاري أغنية وافتحي نتائجها على يوتيوب، أو شغّلي ملف صوتي من جهازك هنا.</p>
+        </div>
+        <div class="music-card">
+          <div class="music-player">
+            <div class="music-player-art" id="music-player-art" aria-hidden="true">
+              <div class="music-spark music-spark-one">✦</div><div class="music-spark music-spark-two">♡</div>
+              <div class="vinyl-disc"><span class="vinyl-label">♡</span></div>
+            </div>
+            <div class="music-player-copy">
+              <span class="music-kicker"><span class="music-live-dot"></span> مساحة المزيكا بتاعتكم</span>
+              <h3 id="music-title">اختاري أغنية.. والباقي إحساس</h3>
+              <p id="music-status" aria-live="polite">أغاني رومانسية مختارة ليكم، أو شغّلي ملف من جهازك.</p>
+              <div class="music-equalizer" id="music-equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <audio id="local-audio-player" controls hidden></audio>
+              <div class="music-actions">
+                <button class="button button-primary" id="upload-audio-button" type="button">شغّلي أغنية من جهازك ♫</button>
+                <input id="audio-file-input" type="file" accept="audio/*" hidden>
+                <a class="music-youtube-link" id="music-youtube-link" href="https://www.youtube.com/results?search_query=%D8%A3%D8%BA%D8%A7%D9%86%D9%8A+%D8%AD%D8%A8+%D9%85%D8%B5%D8%B1%D9%8A%D8%A9" target="_blank" rel="noopener noreferrer">افتحي يوتيوب ♡</a>
+              </div>
+            </div>
+          </div>
+          <div class="music-playlist-heading"><strong>اختاري أغنيتك</strong><span>هتفتح نتائج البحث على يوتيوب</span></div>
+          <div class="music-playlist" id="music-playlist" aria-label="قائمة أغاني رومانسية"></div>
+          <p class="music-local-note">الملفات اللي تختاريها من جهازك مش بتترفع ولا بتتحفظ على الموقع. روابط يوتيوب بتفتح في صفحة جديدة.</p>
+        </div>
+      </section>
+
+      <section class="letter-section section-wrap">
+        <div class="letter-card">
+          <span class="letter-flower" aria-hidden="true">✿</span>
+          <div class="letter-copy"><span class="eyebrow">حاجة من قلبي</span><h2 data-copy="letter">في كلام مبيتقالش غير لما تبقي هنا.</h2></div>
+          <button class="button button-light" id="letter-button" type="button">افتحي جوابك <span>♡</span></button>
+          <span class="letter-star star-one" aria-hidden="true">✦</span><span class="letter-star star-two" aria-hidden="true">✧</span>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <a class="brand footer-brand" href="#home"><span class="brand-heart">♥</span><span>حكايتنا<span class="brand-dot">.</span></span></a>
+        <p>اتعملت بحب.. وإنتِ عارفة لمين <span>♥</span></p>
+        <a class="back-top" href="#home" aria-label="ارجعي لفوق">↑</a>
+      </footer>
+    </main>
+
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="modal-backdrop" data-close-modal></div>
+      <section class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button class="modal-close" type="button" aria-label="اقفلي النافذة" data-close-modal>×</button>
+        <span class="modal-heart" aria-hidden="true">♡</span>
+        <div id="modal-content"></div>
+      </section>
+    </div>
+    <div class="settings-overlay" id="settings-overlay" aria-hidden="true">
+      <button class="settings-backdrop" type="button" data-close-settings aria-label="اقفلي الإعدادات"></button>
+      <aside class="settings-drawer" role="dialog" aria-modal="true" aria-labelledby="settings-title">
+        <div class="settings-heading"><div><span class="eyebrow">مساحتكم على مزاجكم</span><h2 id="settings-title">خصصي الصفحة</h2></div><button type="button" class="modal-close" data-close-settings aria-label="اقفلي الإعدادات">×</button></div>
+        <form id="settings-form">
+          <label class="settings-field">اسم الصفحة<input name="siteName" maxlength="32" value="حكايتنا."></label>
+          <label class="settings-field">الكلام الصغير فوق العنوان<input name="heroBadge" maxlength="60" value="لحدّك إنتِ.. ومن قلبي"></label>
+          <label class="settings-field">العنوان الرئيسي<textarea name="headline" maxlength="140" rows="2">في حاجات كتير حلوة في الدنيا، بس إنتِ أحلاهم.</textarea></label>
+          <label class="settings-field">وصف الصفحة<textarea name="description" maxlength="220" rows="3">عملتلك حتة صغيرة هنا.. فيها ضحكتنا، شوية لعب، وكلام نفسي أقولهولك كل يوم.</textarea></label>
+          <label class="settings-field">عنوان جواب الحب<textarea name="letter" maxlength="100" rows="2">في كلام مبيتقالش غير لما تبقي هنا.</textarea></label>
+          <label class="settings-field">تاريخ بداية الحكاية<input name="startDate" type="date" max="2026-10-23"></label>
+          <div class="settings-field"><span>ألوان الصفحة</span><div class="theme-options">
+            <label class="theme-choice"><input type="radio" name="theme" value="blue"><span class="theme-swatch theme-blue"></span><span>بيبي بلو</span></label>
+            <label class="theme-choice"><input type="radio" name="theme" value="sky"><span class="theme-swatch theme-sky"></span><span>سماوي</span></label>
+            <label class="theme-choice"><input type="radio" name="theme" value="lavender"><span class="theme-swatch theme-lavender"></span><span>لافندر</span></label>
+            <label class="theme-choice"><input type="radio" name="theme" value="pink"><span class="theme-swatch theme-pink"></span><span>وردي وسماوي</span></label>
+          </div></div>
+          <div class="settings-photo-control"><strong>صورة الغلاف</strong><p>اختاري صورة من جهازك عشان تبقى واجهة حكايتكم.</p><button class="mini-button" id="cover-upload" type="button">اختاري صورة غلاف</button><button class="mini-button mini-button-quiet" id="cover-reset" type="button">رجّعي صورة الغلاف</button><input id="cover-input" type="file" accept="image/*" hidden></div>
+          <div class="settings-actions"><button class="button button-primary" type="submit">احفظي التغييرات</button><button class="mini-button mini-button-quiet" id="reset-settings" type="button">رجّعي الإعدادات الأصلية</button></div>
+        </form>
+        <div class="settings-security">
+          <div><strong>قفل الصفحة</strong><p>غيري كلمة المرور اللي بتحمي الإعدادات ومسح الشات.</p></div>
+          <button class="mini-button" id="change-password" type="button">تغيير كلمة المرور</button>
+        </div>
+        <p class="settings-storage-note">كل التعديلات بتتحفظ على نفس الجهاز والمتصفح، ومش بتتشارك تلقائيًا مع جهاز تاني.</p>
+      </aside>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    </div>
+    <section class="entry-gate" id="entry-gate" role="dialog" aria-modal="true" aria-labelledby="entry-title">
+      <div class="entry-card">
+        <span class="entry-heart" aria-hidden="true">♡</span>
+        <span class="eyebrow">مكانكم الخاص</span>
+        <h1 id="entry-title">حكايتنا مستنياكي</h1>
+        <p id="entry-description">اختاري اسمك واكتبي كلمة المرور عشان تدخلي.</p>
+        <label class="entry-field" for="entry-person">داخلة باسم</label>
+        <select id="entry-person">
+          <option value="you">أنا</option>
+          <option value="partner">حبيبتي</option>
+        </select>
+        <form id="entry-form" class="password-form"></form>
+        <p class="entry-security-note">القفل محفوظ على الجهاز والمتصفح ده فقط، ومش بديل عن حماية حقيقية أونلاين.</p>
+      </div>
+    </section>
+  </body>
+</html>
